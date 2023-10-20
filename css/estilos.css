@@ -1,0 +1,265 @@
+:root{
+	font-size: 10px;
+	--lpink:#FF597A;
+	--dpink:#CB4661;
+	--lgreen:#42837D;
+	--dgreen:#2E524F;
+	--lbrown:#4B3703;
+	--dbrown:#2C2107;
+	--ddbrown:#0E1A19;
+	--dbrown80:rgb(44, 33, 7,0.8);
+	--lyellow:#F9CB55;	
+	--dyellow:#FFB800;
+
+	--primary-font:'Oswald', sans-serif;
+	--secondary-font:'Merriweather', serif;
+}
+/**********************************************/
+/*Animaciones*/
+@keyframes halo{
+	0%,100%{
+		box-shadow:0px 5px 10px var(--dyellow);
+	}
+	50%{
+		box-shadow:0px 7px 12px var(--dyellow);
+	}
+}
+@keyframes aparecer{
+	0%{
+		opacity:0;
+	}
+	100%{
+		opacity:100%;
+	}
+}
+@keyframes slide{
+	0%{
+		margin-left:-100%;
+	}
+	100%{
+		margin-left:0;
+	}
+}
+/**********************************************/
+/**********************************************/
+*{
+	margin:0;
+	padding:0;
+	list-style: none;
+	text-decoration: none;
+}
+body{
+	padding-top:95vh;
+}
+
+/**********************************************/
+/*PÁGINA PRINCIPAL*/
+/**********************************************/
+.portada{
+	background-image: linear-gradient(to bottom,var(--dgreen),var(--lgreen),var(--lyellow) 40%,var(--dbrown) 40%,var(--lbrown) 41%);	
+	height: 95vh;
+	width: 100%;
+	top:0;
+	left:0;
+	position:fixed;
+	z-index:-1;
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+/*Dibujo***************************************/
+.dibujo{
+	position: relative;
+	animation:aparecer 1s;
+	height: 55%;
+}
+.figura{
+	height: 100%;
+    display: flex;
+    align-items: end;
+}
+.figura::after{
+	content:"";
+    width: 400px;
+    height: 100px;
+    background-color: var(--dbrown);
+    border-radius: 50%;
+    position: absolute;
+    z-index: -1;
+    bottom: 0px;
+    left: calc(50% - 200px);   
+    transform: rotateX(65deg);
+    transform-origin: bottom;    
+}
+.lampara{
+	width: 120px;
+	height:35%;
+	position:absolute;
+	top:0;
+	right:25%;
+}
+.lampara__cable{
+	background-color:var(--ddbrown);
+	width: 4%;
+	height: 50%;
+	left:calc(50% - 2%);
+	top:0;
+	position:absolute;
+}
+.lampara__redonda-container{
+	width:100%;
+	height: 30%;
+	top:50%;
+	position:absolute;
+	overflow:hidden;
+}
+.lampara__redonda{
+	background-image: linear-gradient(to bottom,var(--ddbrown),var(--dgreen) 80%);
+	width:100%;
+	height: 150%;
+	border-radius:50%;
+}
+.lampara__luz{
+	height: 30%;
+	width: 50%;
+	top:60%;
+	left:calc(50% - 25%);
+	position:absolute;
+	background-color: var(--lyellow);
+	border-radius:50%;
+	z-index:-1;
+	box-shadow:0px 5px 10px var(--dyellow);
+	animation:halo 1.5s infinite;
+}
+
+
+/*Texto*********************************/
+.portada__texto{
+	text-align: center;
+	margin-top: 4em;
+}
+
+.portada__titulo{
+	font-family: 'Oswald', sans-serif;
+	font-size: 5rem;
+	color:white;
+	text-transform: uppercase;
+	animation:slide 0.5s ease-out;
+}
+
+.portada__subtitulo{
+	font-family: 'Merriweather', serif;
+	color:#FF597A;
+	font-size: 2.5rem;
+	font-style: italic;
+	font-weight: 300;
+	animation:slide 0.7s ease-out;
+}
+
+/**********************************************/
+/*NAVEGACION*/
+/**********************************************/
+/*Principal************************************/
+.navegacion{
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	background-color:var(--dbrown80);
+	position: sticky;
+	top:0;
+	z-index:2;
+	margin-top: -8rem;
+}
+.menu-principal{
+	display:flex;
+	justify-content: center;
+}
+.menu-principal__enlace{
+	font-family: 'Oswald', sans-serif;
+	font-size: 2rem;
+	color:white;
+	text-transform: uppercase;
+	font-weight: lighter;
+	display:block;	
+	padding:2rem 1rem;
+	transition:color 0.2s, border-top 0.2s;
+}
+.menu-principal__enlace:hover{
+	color:var(--lyellow);
+}
+
+/*Action***************************************/
+.menu-action{
+	position:fixed;
+	left:0;
+	top:8rem;
+	z-index:2;
+}
+.menu-action__enlace{
+	font-family: 'Oswald', sans-serif;
+	font-size: 1.3rem;
+	color:white;
+	text-transform: uppercase;
+	font-weight: lighter;
+	padding:1em;
+	border-radius:0 20% 20% 0;
+	background-color: var(--dpink);
+	margin-bottom:1em;	
+	display:block;
+	writing-mode: vertical-rl;
+	transition:background-color 0.2s,padding-left 0.2s;
+}
+.menu-action__enlace:hover{
+	background-color: var(--lpink);
+	padding-left:2em;
+}
+
+/**********************************************/
+/*SECCIONES*/
+/**********************************************/
+.seccion--green{	
+	background-color: var(--dgreen);	
+}
+.seccion--brown{	
+	background-color: var(--dbrown);	
+}
+.seccion--first{
+	border-top:2rem solid var(--lbrown);	
+}
+.container{
+	margin: 0 auto;
+    max-width: 60rem;
+    padding: 3rem 0;
+}
+.seccion__titulo{
+	color:var(--lyellow);
+	font-family: 'Merriweather', serif;
+	font-size: 4em;
+	font-style: italic;
+	font-weight: 300;
+	position: relative;
+	z-index: 1;
+}
+.seccion__titulo::before{
+	content: url(../img/flecha.svg);
+	margin-right: 1rem;
+}
+.seccion__titulo::after{
+	content: url(../img/sobre_mi.svg);
+    position: absolute;
+    z-index: -1;
+    margin-left: -1rem;
+    margin-top: 0.2em;
+}
+
+.seccion__texto{
+	color:white;
+	font-family: 'Oswald', sans-serif;
+	font-size: 2em;
+	font-weight: 200;
+	text-align: justify;
+}
+/*Sobre mi************************************/
+
+
