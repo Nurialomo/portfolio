@@ -6,166 +6,217 @@
 	<title>Nuria Lopez Portfolio</title>
 	<link rel="stylesheet" href="css/estilos.css">
 	<script defer src="js/funciones.js"></script>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300&family=Oswald:wght@300;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Merriweather:ital,wght@1,700&family=Oswald:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-	<header>
-		<div class="Welcome">
-			<h1 class="welcome__tl">¡Hola! Soy Núria</h1>
-			<h2 class="welcome__sbt">Web developer y mucho más...</h2>
+
+	<header class="header">
+		<div class="container header__container">
+			<div class="header__logo">
+				<p class="title header__tl"><span class="header__tl--la">la</span>LULA</h1>
+				<p class="subtitle header__sbt">Frontend developer</h2>
+			</div>
+			<button class="mobile-nav-toggle" aria-controls="primary-nav" aria-expanded="false"></button>
+			<nav id="primary-nav" class="primary-nav" data-visible="">
+				<ul class="nav__list">
+					<li><a href="#" class="nav__link">Experiencia</a></li>
+					<li><a href="#" class="nav__link">Estudios</a></li>
+					<li><button class="nav__link nav__button button--contact" >Contacto</button></li>
+					<li><button class=" nav__link nav__button button--cv">CV</button></li>					
+				</ul>
+				
+				<div class="contact">
+					<form class="contact__form">
+						<input type="text" name="" class="form__input">
+						<input type="text" name="" class="form__input">
+						<input type="text" name="" class="form__input">
+						<button class="form__submit">Enviar</button>	
+					</form>
+					<ul class="contact__list">
+						<li class="contact__elem--mail">nurialomo@gmail.com</li>
+						<li class="contact__elem--whats">657592004</li>
+						<li class="contact__elem--git">Github</li>
+					</ul>
+				</div>
+				
+			</nav>
 		</div>
-		<nav class="primary-nav">
-			<ul class="nav__list">
-				<li><a href="#" class="nav__link"></a></li>
-				<li><a href="#" class="nav__link"></a></li>
-			</ul>
-			<button class="nav__button button--contact" >Escríbeme</button>
-			<button class="nav__button button--cv">CV</button>
-		</nav>
 	</header>
+
 	<main>
-		<section class="section section--grad">
-			<img src="img/recurso1.png" class="section__img">
-			<div class="section__text">
-				<p>Después de nueve años gestionando mi propia empresa de hostelería vuelvo al mundo del desarrollo web. Tengo experiencia de más de diez años en este sector y si... ha pasado mucho tiempo  pero no me subestiméis, ¡me estoy reciclando y poniendo al día para triunfar!</p>
-				<h2 class="section__sbt">Y lo que todavía no se lo aprendo</h2>
-			</div>
-		</section>
-		<section class="section section--white">
-			<ul class="section__list">
-				<li class="section__elem">HTML</li>
-				<li class="section__elem">CSS</li>
-				<li class="section__elem">JS</li>
-				<li class="section__elem">GIT</li>
-				<li class="section__elem">FIGMA</li>
-				<li class="section__elem">RESPONSIVE</li>
-			</ul>
-		</section>
-
-		<section class="section section--grad">
-			<h2 class="section__tit">Experiencia profesional</h2>
-			
-			<div class="card">
-				<p class="card__year">Mayo 2014 - abril 2023</p>
-				<h3 class="card__tit">Gerente restaurante</h3>
-				<p class="card__sbt">Simona · Reus</p>
-				<p class="card__text">Fruto de la ilusión y la pasión por la cocina saludable surgió este 
-				proyecto junto a una amiga. Ideamos, creamos, gestionamos y mantuvimos durante nueve años un acogedora cafetería-restaurante en el centro de Reus. Mis tareas implicaron la gestión del equipo, menús, cocina, atención al cliente y todo lo que implica la gestión de una empresa.</p>
-			</div>
-			<div class="card">
-				<p class="card__year">Septiembre 2011 - enero 2014</p>
-				<h3 class="card__tit">Desarrolladora web</h3>
-				<p class="card__sbt">Freelance</p>
-				<p class="card__text">Trabajos de maquetación, desarrollo de webs interactivas, sistemas de gestión de contenido, aplicaciones web y tiendas on-line.</p>
-			</div>
-			<div class="card">
-				<p class="card__year">Abril 2007 - junio 2010</p>
-				<h3 class="card__tit">Desarrolladora web</h3>
-				<p class="card__sbt">Evolutt Studio · Tarragona</p>
-				<p class="card__text">Desarrolladora Web, maquetación, desarrollo de webs interactivas, sistemas de gestión de contenido, aplicaciones web y tiendas on-line. </p>
-			</div>
-			<div class="card">
-				<p class="card__year">2014 - 2023</p>
-				<h3 class="card__tit">Desarrolladora flash/maquetadora</h3> 
-				<p class="card__sbt">SM Solutions · Barcelona</p>
-				<p class="card__text">Desarrollo web en Flash y maquetación xhtml/css</p>
-			</div>
-			<div class="card">
-				<p class="card__year">Noviembre 2004 - septiembre 2006</p>
-				<h3 class="card__tit">Desarrolladora Flash / Diseñadora</h3>
-				<p class="card__sbt">Transware · Dublin </p>
-				<p class="card__text">Transware es una importante empresa de localización y traducción donde llevé a cabo diferentes tareas como desarrollo de cursos online usando Macromedia Flash, diseño gráfico de interfaces y testeo del software finalizado.</p>
-			</div>
-			<div class="card">
-				<p class="card__year">2014 - 2023</p>
-				<h3 class="card__tit">Soporte técnico</h3> 
-				<p class="card__sbt">Lexmark · Dublin</p>
-				<p class="card__text">Primer punto de contacto de los clientes de Lexmark aportando todo tipo de soporte técnico sobre los productos Lexmark a través del teléfono, e-mail, Internet y bases de datos.</p>
-			</div>
-			<div class="card">
-				<p class="card__year">2014 - 2023</p>
-				<h3 class="card__tit">Soporte técnico</h3>
-				<p class="card__sbt">Xerox · Dublin</p>
-				<p class="card__text">Primer punto de contacto de los clientes de Xerox aportando todo tipo de soporte técnico sobre sus productos vía telefónica, e-mail, Internet y bases de datos.</p>
-			</div>
-			<div class="card">
-				<p class="card__year">Septiembre 2001 - agosto 2003</p>
-				<h3 class="card__tit">Diseñadora gráfica / Desarrolladora web</h3>
-				<p class="card__sbt">Kursor · Reus</p>
-				<p class="card__text">Mi trabajo dentro de esta pequeña agencia de publicidad fue desde la generación de ideas hasta el completo desarrollo de diseños para impresión y web, páginas web y CD-ROM además de grabación y edición de vídeo. </p>
-			</div>
-			<div class="card">
-				<p class="card__year">Febrero 1999 - Julio 1999
-</p>
-				<h3 class="card__tit">Becaria ENG</h3>
-				<p class="card__sbt">Canal Reus TV · Reus</p>
-				<p class="card__text">Grabación de imágenes, redacción, locución y edición de noticias locales.</p>
-			</div>
-			<div class="card">
-				<p class="card__year">Junio 1998 - septiembre 1998</p>
-				<h3 class="card__tit">Redactora</h3>
-				<p class="card__sbt">Diari de Tarragona · Reus</p>
-				<p class="card__text">Redacción de noticias.</p>
+		<section class="section welcome section--grad">
+			<div class="container welcome__container">
+				<div class="welcome__img"><img src="img/recurso1.png" class="img"></div>
+				<div class="welcome__text">
+					<h1 class="title">¡Hola! Soy Núria</h1>
+					<h2 class="subtitle">Frontend developer</h2>
+					<p class="text">Después de nueve años gestionando mi propia empresa de hostelería vuelvo al mundo del desarrollo web. Tengo experiencia de más de diez años en este sector y si... ha pasado mucho tiempo  pero no me subestiméis, ¡me estoy reciclando y poniendo al día para triunfar!</p>
+				</div>
 			</div>
 		</section>
 
-		<section class="section section--white">			
-			<div class="card">
-				<p class="card__sbt card__sbt--br">APTITUDES</p>
-				<ul class="card__list">
-					<li class="card__elem"> Creatividad</li>
-					<li class="card__elem">Motivación y liderazgo</li>
-					<li class="card__elem">Trabajo en equipo</li>
-					<li class="card__elem">Dotes de planificación y gestión</li>
-					<li class="card__elem">Toma de decisiones</li>
-					<li class="card__elem">Trato amable y atento</li>
-				</ul>
-			</div>
-			<div class="card">
-				<p class="card__sbt card__sbt--br">IDIOMAS</p>
-				<ul class="card__list">
-					<li class="card__elem"> Castellano</li>
-					<li class="card__elem">Català (Nivell C)</li>
-					<li class="card__elem">Inglés (B2)</li>
+		<section class="section skills">
+			<div class="container skills__container">
+				<ul class="section__list">
+					<li class="section__elem">
+						<div>
+							<h2 class="subtitle">Maquetación</h2>
+							<p class="text text--br">HTML, CSS, Bem, SASS</p>
+						</div>
+					</li>
+					<li class="section__elem">
+						<div>
+							<h2 class="subtitle">Programación</h2>
+							<p class="text text--br">JS Vanilla, Jquery, AJAX, PHP, MySQL</p>
+						</div>
+					</li>
+					<li class="section__elem">
+						<div>
+							<h2 class="subtitle">Diseño</h2>
+							<p class="text text--br">Illustrator, Photoshop, Figma, Responsive</p>
+						</div>
+					</li>
+					<li class="section__elem">
+						<div>
+							<h2 class="subtitle">Frameworks</h2>
+							<p class="text text--br">Wordpress, en proceso React y Angular</p>
+						</div>
+					</li>
 				</ul>
 			</div>
 		</section>
 
-		<section class="section section--grad">
-			<h2 class="section__tit">Estudios</h2>	
-			<div class="card">
-				<p class="card__year">Junio 2023 - septiembre 2023</p>
-				<h3 class="card__tit">Diseño web con HTML5, CSS3 y JavaScript</h3>
-				<p class="card__sbt">CEI · Online</p>
-				<p class="card__text">Fruto de la ilusión y la pasión por la cocina saludable surgió este proyecto junto a una amiga. Ideamos, creamos, </p>
+		<section class="section experiencia section--grad">
+			<div class="container experiencia__container">
+				<h2 class="title section--title">Experiencia profesional</h2>
+				<div class="boxes">
+					<div class="box">
+						<p class="subtitle3 box--subtitle3">Mayo 2014 - abril 2023</p>
+						<h3 class="subtitle box--subtitle">Gerente restaurante</h3>
+						<p class="subtitle2 box--subtitle2">Simona · Reus</p>
+						<p class="text box--text">Fruto de la ilusión y la pasión por la cocina saludable surgió este proyecto junto a una amiga. Ideamos, creamos, gestionamos y mantuvimos durante nueve años un acogedora cafetería-restaurante en el centro de Reus.</p>
+					</div>
+					<div class="box">
+						<p class="subtitle3 box--subtitle3">Septiembre 2011 - enero 2014</p>
+						<h3 class="subtitle box--subtitle">Desarrolladora web</h3>
+						<p class="subtitle2 box--subtitle2">Freelance</p>
+						<p class="text box--text">Trabajos de maquetación, desarrollo de webs interactivas, sistemas de gestión de contenido, aplicaciones web y tiendas on-line.</p>
+					</div>
+					<div class="box">
+						<p class="subtitle3 box--subtitle3">Abril 2007 - junio 2010</p>
+						<h3 class="subtitle box--subtitle">Desarrolladora web</h3>
+						<p class="subtitle2 box--subtitle2">Evolutt · Tarragona</p>
+						<p class="text box--text">Desarrolladora Web, maquetación, desarrollo de webs interactivas, sistemas de gestión de contenido, aplicaciones web y tiendas on-line. </p>
+					</div>
+					<div class="box">
+						<p class="subtitle3 box--subtitle3">2014 - 2023</p>
+						<h3 class="subtitle box--subtitle">Maquetadora/Flash</h3> 
+						<p class="subtitle2 box--subtitle2">SM Solutions · Barcelona</p>
+						<p class="text box--text">Desarrollo web en Flash y maquetación xhtml/css</p>
+					</div>
+					<div class="box">
+						<p class="subtitle3 box--subtitle3">Noviembre 2004 - septiembre 2006</p>
+						<h3 class="subtitle box--subtitle">Diseñadora/Flash</h3>
+						<p class="subtitle2 box--subtitle2">Transware · Dublin </p>
+						<p class="text box--text">Desarrollo de cursos online usando Macromedia Flash, diseño gráfico de interfaces y testeo del software finalizado.</p>
+					</div>
+					<div class="box">
+						<p class="subtitle3 box--subtitle3">2014 - 2023</p>
+						<h3 class="subtitle box--subtitle">Soporte técnico</h3> 
+						<p class="subtitle2 box--subtitle2">Lexmark · Dublin</p>
+						<p class="text box--text">Primer punto de contacto de los clientes de Lexmark aportando todo tipo de soporte técnico sobre sus productos.</p>
+					</div>
+					<div class="box">
+						<p class="subtitle3 box--subtitle3">2014 - 2023</p>
+						<h3 class="subtitle box--subtitle">Soporte técnico</h3>
+						<p class="subtitle2 box--subtitle2">Xerox · Dublin</p>
+						<p class="text box--text">Primer punto de contacto de los clientes de Xerox aportando todo tipo de soporte técnico sobre sus productos.</p>
+					</div>
+					<div class="box">
+						<p class="subtitle3 box--subtitle3">Septiembre 2001 - agosto 2003</p>
+						<h3 class="subtitle box--subtitle">Diseño y desarrollo web</h3>
+						<p class="subtitle2 box--subtitle2">Kursor · Reus</p>
+						<p class="text box--text">Mi trabajo dentro de esta pequeña agencia de publicidad fue desde la generación de ideas hasta el completo desarrollo de diseños para impresión y web. </p>
+					</div>
+					<div class="box">
+						<p class="subtitle3 box--subtitle3">Febrero 1999 - Julio 1999
+		</p>
+						<h3 class="subtitle box--subtitle">Becaria ENG</h3>
+						<p class="subtitle2 box--subtitle2">Canal Reus TV · Reus</p>
+						<p class="text box--text">Grabación de imágenes, redacción, locución y edición de noticias locales.</p>
+					</div>
+					<div class="box">
+						<p class="subtitle3 box--subtitle3">Junio 1998 - septiembre 1998</p>
+						<h3 class="subtitle box--subtitle">Redactora</h3>
+						<p class="subtitle2 box--subtitle2">Diari de Tarragona · Reus</p>
+						<p class="text box--text">Redacción de noticias.</p>
+					</div>
+				</div>
 			</div>
-			<div class="card">
-				<p class="card__year">Octubre 2021 – julio 2024</p>
-				<h3 class="card__tit">Terapeuta Gestalt</h3>
-				<p class="card__sbt">Cercle Gestalt · Tarragona</p>
-				<p class="card__text">Fruto de la ilusión y la pasión por la cocina saludable surgió este proyecto junto a una amiga. Ideamos, creamos, </p>
+		</section>
+
+		<section class="section aptitudes">	
+			<div class="container aptitudes__container">		
+				<div class="box">
+					<h2 class="subtitle">APTITUDES</h2>
+					<ul class="section__list">
+						<li class="section__elem"> Creatividad</li>
+						<li class="section__elem">Motivación y liderazgo</li>
+						<li class="section__elem">Trabajo en equipo</li>
+						<li class="section__elem">Dotes de planificación y gestión</li>
+						<li class="section__elem">Toma de decisiones</li>
+						<li class="section__elem">Trato amable y atento</li>
+					</ul>
+				</div>
+				<div class="box">
+					<h2 class="section__tit section__tit--br">IDIOMAS</h2>
+					<ul class="section__list">
+						<li class="section__elem">"> Castellano</li>
+						<li class="section__elem">Català (Nivell C)</li>
+						<li class="section__elem">Inglés (B2)</li>
+					</ul>
+				</div>
 			</div>
-			<div class="card">
-				<p class="card__year">2005</p>
-				<h3 class="card__tit">Máster en Sistemas Multimedia</h3>
-				<p class="card__sbt">Trinity College · Dublin</p>
-				<p class="card__text">Máster sobre la teoría y práctica de la creación y desarrollo de aplicaciones a través de todo tipo de tecnología digital. El programa presenta cursos en narración interactiva, diseño gráfico, tecnologías de audio y vídeo en combinación con una introducción a la informática y programación de servidores y plataformas.</p>
-			</div>
-			<div class="card">
-				<p class="card__year">Julio de 2001 - 2002</p>
-				<h3 class="card__tit">Máster en recursos para Internet</h3>
-				<p class="card__sbt">UPV · Valencia</p>
-				<p class="card__text">Máster dedicado a la producción de recursos para ser distribuidos online en cualquier formato: web, vídeo, audio, presentaciones corporativas, realidad virtual, etc.</p>
-			</div>
-			<div class="card">
-				<p class="card__year">2014 - 2023</p>
-				<h3 class="card__tit">Licenciatura Comunicación Audiovisual</h3>
-				<p class="card__sbt">Ramón Llull · Barcelona</p>
-				<p class="card__text">Fruto de la ilusión y la pasión por la cocina saludable surgió este proyecto junto a una amiga. Ideamos, creamos, </p>
-			</div>
-			
+		</section>
+
+		<section class="section estudios section--grad">
+				<div class="container estudios__container">
+				<h2 class="title section--title">Estudios</h2>	
+				<div class="boxes">
+					<div class="box">
+						<p class="subtitle3 box--subtitle3">Junio 2023 - septiembre 2023</p>
+						<h3 class="subtitle box--subtitle">Diseño web con HTML5, CSS3 y JavaScript</h3>
+						<p class="subtitle2 box--subtitle2">CEI · Online</p>
+						<p class="text box--text">Fruto de la ilusión y la pasión por la cocina saludable surgió este proyecto junto a una amiga. Ideamos, creamos, </p>
+					</div>
+					<div class="box">
+						<p class="subtitle3 box--subtitle3">Octubre 2021 – julio 2024</p>
+						<h3 class="subtitle box--subtitle">Terapeuta Gestalt</h3>
+						<p class="subtitle2 box--subtitle2">Cercle Gestalt · Tarragona</p>
+						<p class="text box--text">Fruto de la ilusión y la pasión por la cocina saludable surgió este proyecto junto a una amiga. Ideamos, creamos, </p>
+					</div>
+					<div class="box">
+						<p class="subtitle3 box--subtitle3">2005</p>
+						<h3 class="subtitle box--subtitle">Máster en Sistemas Multimedia</h3>
+						<p class="subtitle2 box--subtitle2">Trinity College · Dublin</p>
+						<p class="text box--text">Máster sobre la teoría y práctica de la creación y desarrollo de aplicaciones a través de todo tipo de tecnología digital. El programa presenta cursos en narración interactiva, diseño gráfico, tecnologías de audio y vídeo en combinación con una introducción a la informática y programación de servidores y plataformas.</p>
+					</div>
+					<div class="box">
+						<p class="subtitle3 box--subtitle3">Julio de 2001 - 2002</p>
+						<h3 class="subtitle box--subtitle">Máster en recursos para Internet</h3>
+						<p class="subtitle2 box--subtitle2">UPV · Valencia</p>
+						<p class="text box--text">Máster dedicado a la producción de recursos para ser distribuidos online en cualquier formato: web, vídeo, audio, presentaciones corporativas, realidad virtual, etc.</p>
+					</div>
+					<div class="box">
+						<p class="subtitle3 box--subtitle3">2014 - 2023</p>
+						<h3 class="subtitle box--subtitle">Licenciatura Comunicación Audiovisual</h3>
+						<p class="subtitle2 box--subtitle2">Ramón Llull · Barcelona</p>
+						<p class="text box--text">Fruto de la ilusión y la pasión por la cocina saludable surgió este proyecto junto a una amiga. Ideamos, creamos, </p>
+					</div>
+				</div>	
+			</div>		
 		</section>
 
 	</main>

@@ -1,12 +1,15 @@
-/*const nav=document.querySelector("nav");
+const primaryNav=document.querySelector(".primary-nav");
+const navToggle=document.querySelector(".mobile-nav-toggle");
+console.log(navToggle);
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if(!entry.isIntersecting){
-    	nav.style.position=("sticky");
-    	console.log("dentro");
-    }
-  });
-});
+navToggle.addEventListener("click",()=>{
+  const visibility=primaryNav.getAttribute("data-visible");
 
-observer.observe(nav);*/
+  if(visibility==="false" || visibility===""){
+    primaryNav.setAttribute("data-visible","true");
+    navToggle.setAttribute("aria-expanded","true");
+  }else{
+    primaryNav.setAttribute("data-visible","false");
+    navToggle.setAttribute("aria-expanded","false");
+  }
+})
