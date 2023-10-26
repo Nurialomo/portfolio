@@ -59,6 +59,7 @@ body{
 	color:var(--dyellow);
 	font-size:calc(var(--h1-fs) / 2);
 	font-weight:var(--secondary-fw) ;
+	display: inline;
 }
 .subtitle2{
 	font-family: var(--primary-font);
@@ -164,9 +165,6 @@ body{
   	background-repeat: no-repeat;
   	background-size: 60vw,100vw;
 }
-.section{
-	padding:clamp(1rem,2vw,3rem);
-}
 .section--title{
 	display:inline-block;
 	font-size:calc(var(--h1-fs) / 1.5);	
@@ -177,9 +175,7 @@ body{
 	padding-right: clamp(1.2rem, 3vw, 2.2rem);
 	margin-bottom: 1rem;
 }
-.box--text{
-	font-size:calc(var(--h1-fs) / 3.5);
-}
+
 /*WELCOME*/
 /***************/
 .welcome{
@@ -206,7 +202,7 @@ body{
 }
 
 
-/*SKILLS*/
+/*LISTADOS*/
 /***************/
 .section__list{
 	display: grid;
@@ -214,16 +210,8 @@ body{
 	align-items:start;
 	justify-content: center;
 	gap:1.5em;
-
-
 }
-.section__list > li{
-	flex-basis: 1;
-}
-.skills .subtitle{
-	display: inline;
-}
-.skills .section__elem::before{
+.section__elem::before{
 	content:url("../img/tick.svg");
 }
 .section__elem{
@@ -232,7 +220,7 @@ body{
 	gap:.5rem;
 }
 
-/*EXPERIENCIA*/
+/*BOXES*/
 /***************/
 .boxes{
 	display:grid;
@@ -245,7 +233,9 @@ body{
 	padding:0.5rem;
 	border-radius:.5rem;
 }
-
+.box--text{
+	font-size:calc(var(--h1-fs) / 3);
+}
 
 /**********************************************/
 /**********************************************/
@@ -334,6 +324,9 @@ body{
 	}
 	.section__list{
   		grid-template-columns: repeat(2, 1fr);
+	}
+	.boxes{	
+		grid-template-columns: repeat(2,1fr);
 	}
 
 }
