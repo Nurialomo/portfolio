@@ -22,11 +22,6 @@
 	--primary-fw-light:300;
 	--secondary-fw:700;
 	--secondary-fs:italics;
-
-	--h1-fs:clamp(2rem, 5vw, 3rem);
-	--h2-fs:clamp(.8rem, 3vw, 1.5rem);
-	--menu-fs:clamp(.6rem, 2.2vw, 1.2rem);
-	--text-fs:clamp(.5rem, 2vw, 1rem);
 }
 /**********************************************/
 /*GENERAL*/
@@ -49,22 +44,38 @@ body{
 .title{
 	font-family: var(--primary-font);
 	color:var(--white);
-	font-size:var(--h1-fs);
+	font-size:clamp(2rem,5vw,3rem);
 	font-weight:var(--primary-fw-bold) ;
 	text-transform: uppercase;
 	text-shadow: 1px 1px 1px black;
 }
+.header--title{
+	line-height:clamp(1.2rem,3.5vw,1.8rem) ;
+}
+.section--title{
+	display:inline-block;
+	font-size:clamp(1.5rem,4vw,2rem);	
+	background-image:url("../img/logo.svg");
+	background-repeat: no-repeat;
+	background-position: right top;
+	background-size: clamp(2rem,5vw,3rem);
+	padding-right: clamp(1.2rem, 3vw, 2.2rem);
+	margin-bottom: 1rem;
+}
 .subtitle{
 	font-family: var(--secondary-font);
 	color:var(--dyellow);
-	font-size:calc(var(--h1-fs) / 2);
+	font-size:clamp(1.3rem,3vw,1.7rem);
 	font-weight:var(--secondary-fw) ;
 	display: inline;
+}
+.header--subtitle{
+	font-size:clamp(.8rem,2vw,1.2rem);
 }
 .subtitle2{
 	font-family: var(--primary-font);
 	color:var(--lyellow);
-	font-size:calc(var(--h1-fs) / 3);
+	font-size:clamp(.8rem,2.8vw,1.1rem);
 	font-weight:var(--primary-fw-reg) ;
 	text-transform: uppercase;
 	letter-spacing: 0.25rem;
@@ -72,20 +83,21 @@ body{
 .subtitle3{
 	font-family: var(--primary-font);
 	color:var(--white);
-	font-size:calc(var(--h1-fs) / 3.2);
-	font-weight:var(--primary-fw-reg) ;
+	font-size:clamp(.8rem,2.8vw,1.1rem);
+	font-weight:var(--primary-fw-light) ;
 }
 .text{
 	color:var(--white);
 	font-family: var(--primary-font);
 	font-weight: var(--primary-fw-light);
-	font-size:calc(var(--h1-fs) / 2.6);
-	line-height: 1.5em;
+	font-size:1rem;
+	line-height: 1.5rem;
 	max-width: 50ch;	
 }
 .text--br{
 	color:var(--ddbrown);
 }
+
 
 /**********************************************/
 /*HEADER*/
@@ -106,12 +118,10 @@ body{
 /*LOGO*/
 /***************/
 .header__logo{
-	line-height:calc(var(--h1-fs) / 1.8);
-	padding-right: clamp(1.2rem, 3vw, 2.2rem);
 	background-image:url("../img/logo.svg");
 	background-repeat: no-repeat;
-	background-size: clamp(2rem, 6vw, 3.5rem);
-	background-position: right top;
+	background-size: clamp(2.5rem, 6vw, 3.5rem);
+	background-position: calc(100% - .5rem) top;
 }
 
 .header__tl--la{
@@ -119,9 +129,7 @@ body{
 	font-weight: 300;
 	text-transform: lowercase;
 }
-.header__sbt{
-	font-size:calc(var(--h1-fs) / 3);
-}
+
 
 /*NAV*/
 /***************/
@@ -159,23 +167,18 @@ body{
 
 /**********************************************/
 /*SECCIONES*/
+
 .section--grad{
 	background-image: url("../img/Ellipse.svg"), linear-gradient(to bottom,var(--ddgreen),var(--lgreen));
 	background-position:1rem 1rem,left top;
   	background-repeat: no-repeat;
   	background-size: 60vw,100vw;
 }
-.section--title{
-	display:inline-block;
-	font-size:calc(var(--h1-fs) / 1.5);	
-	background-image:url("../img/logo.svg");
-	background-repeat: no-repeat;
-	background-position: right top;
-	background-size: var(--h1-fs) ;	
-	padding-right: clamp(1.2rem, 3vw, 2.2rem);
-	margin-bottom: 1rem;
+.welcome {
+	background-image: linear-gradient(to bottom,var(--ddgreen),var(--lgreen));
+	background-position:left top;
+  	background-size:100vw;
 }
-
 /*WELCOME*/
 /***************/
 .welcome{
@@ -233,9 +236,7 @@ body{
 	padding:0.5rem;
 	border-radius:.5rem;
 }
-.box--text{
-	font-size:calc(var(--h1-fs) / 3);
-}
+
 
 /**********************************************/
 /**********************************************/
@@ -309,6 +310,15 @@ body{
 
 	.welcome{
 		padding-top:4rem;
+	}
+	.section__list{
+		display:block;
+	}
+	.boxes{	
+		display:block;
+	}
+	.box{
+		margin:1rem 0;
 	}
 
 }
