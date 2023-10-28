@@ -28,27 +28,11 @@
 			<button class="mobile-nav-toggle" aria-controls="primary-nav" aria-expanded="false"></button>
 			<nav id="primary-nav" class="primary-nav" data-visible="">
 				<ul class="nav__list">
-					<li><a href="#" class="nav__link">Experiencia</a></li>
-					<li><a href="#" class="nav__link">Estudios</a></li>
-					<li><button class="nav__link nav__button button--contact" >Contacto</button></li>
-					<li><button class=" nav__link nav__button button--cv">CV</button></li>					
-				</ul>
-
-				<! CONTACTO ->
-				<div class="contact">
-					<form class="contact__form">
-						<input type="text" name="" class="form__input">
-						<input type="text" name="" class="form__input">
-						<input type="text" name="" class="form__input">
-						<button class="form__submit">Enviar</button>	
-					</form>
-					<ul class="contact__list">
-						<li class="contact__elem--mail">nurialomo@gmail.com</li>
-						<li class="contact__elem--whats">657592004</li>
-						<li class="contact__elem--git">Github</li>
-					</ul>
-				</div>
-				
+					<li class="nav__elem"><a href="#experiencia" class="nav__link">Experiencia</a></li>
+					<li class="nav__elem"><a href="#estudios" class="nav__link">Estudios</a></li>
+					<li class="nav__elem"><a href="#contacto" class="nav__link">Contacto</a></li>
+					<li class="nav__elem"><button class="nav__button">CV</button></li>					
+				</ul>				
 			</nav>
 		</div>
 	</header>
@@ -63,9 +47,9 @@
 			<div class="container welcome__container">
 				<div class="welcome__img"><img src="img/recurso1.png" class="img"></div>
 				<div class="welcome__text">
-					<h1 class="title">¡Hola! Soy Núria</h1>
-					<h2 class="subtitle">Frontend developer</h2>
-					<p class="text">Después de nueve años gestionando mi propia empresa de hostelería vuelvo al mundo del desarrollo web. Tengo experiencia de más de diez años en este sector y si... ha pasado mucho tiempo  pero no me subestiméis, ¡me estoy reciclando y poniendo al día para triunfar!</p>
+					<h1 class="welcome__title title">¡Hola! Soy Núria</h1>
+					<h2 class="welcome_subtitle subtitle">Frontend developer</h2>
+					<p class="welcome__text text">Después de nueve años gestionando mi propia empresa de hostelería vuelvo al mundo del desarrollo web. Tengo experiencia de más de diez años en este sector y si... ha pasado mucho tiempo  pero no me subestiméis, ¡me estoy reciclando y poniendo al día para triunfar!</p>
 				</div>
 			</div>
 		</section>
@@ -95,7 +79,7 @@
 					</li>
 					<li class="skills__elem">
 						<div>
-							<h2 class="subtitle">Frameworks</h2>
+							<h2 class="skills__subtitle subtitle">Frameworks</h2>
 							<p class="skills__text text">Wordpress, en proceso React y Angular</p>
 						</div>
 					</li>
@@ -105,9 +89,9 @@
 
 		<! EXPERIENCIA ->
 		<! ///////////////////////////////////////////////////->
-		<section class="section experiencia section--grad">
+		<section class="section experiencia section--grad" id="experiencia">
 			<div class="container experiencia__container">
-				<h2 class="title section__title">Experiencia profesional</h2>
+				<h2 class="section__title title">Experiencia profesional</h2>
 				<div class="boxes">
 					<div class="box">
 						<p class="box__subtitle3 subtitle3">Mayo 2014 - abril 2023</p>
@@ -208,7 +192,7 @@
 
 		<! ESTUDIOS ->
 		<! ///////////////////////////////////////////////////->
-		<section class="section estudios section--grad">
+		<section class="section estudios section--grad" id="estudios">
 				<div class="container estudios__container">
 				<h2 class="title section__title">Estudios</h2>	
 				<div class="boxes">
@@ -245,9 +229,28 @@
 				</div>	
 			</div>		
 		</section>
-
 	</main>
-	<footer></footer>
+
+	<! //////////////////////////////////////////////////////////////->
+	<! FOOTER ->
+	<! //////////////////////////////////////////////////////////////->
+	<footer class="footer">
+		<! CONTACTO ->
+		<! ///////////////////////////////////////////////////->
+		<div class="container contact" id="contacto">
+			<form class="contact__form">
+				<input type="text" name="" class="form__input">
+				<input type="text" name="" class="form__input">
+				<input type="text" name="" class="form__input">
+				<button class="form__submit">Enviar</button>	
+			</form>
+			<ul class="contact__list">
+				<li class="contact__elem--mail">nurialomo@gmail.com</li>
+				<li class="contact__elem--whats">657592004</li>
+				<li class="contact__elem--git">Github</li>
+			</ul>
+		</div>
+	</footer>
 
 </body>
 </html>
