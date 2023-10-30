@@ -294,7 +294,7 @@ body{
 	content:" ";
 	background-color: var(--lyellow);
 	height: 1px;
-	width: 20rem;
+	width: 15rem;
 	margin:0 1rem;
 }
 .skills__elem div{
