@@ -502,8 +502,8 @@ body{
 		margin-bottom:1rem;
 		transition-delay: 0s;
 	}
-	.form__input{
-		width: 25ch;
+	.footer__input{
+		width: 33ch;
 	}
 
 }	
