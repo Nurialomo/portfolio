@@ -7,8 +7,8 @@ const navElem=document.querySelectorAll(".nav__elem");
 //NAV MOVIL
 
 //abre y cierra la navegacion movil
-navToggle.addEventListener("click",()=>{
-  const visibility=primaryNav.getAttribute("data-visible");
+navToggle.addEventListener("click",()=>{//si hacemos click en el boton burguer
+  const visibility=primaryNav.getAttribute("data-visible");//obtenemos el estado del menu
 
   if(visibility==="false" || visibility===""){
     primaryNav.setAttribute("data-visible","true");
@@ -19,11 +19,11 @@ navToggle.addEventListener("click",()=>{
   }
 });
 
-//cierra la navegación cuando se clica un enlace en la versión movil
+//cierra la navegación cuando se clica un enlace
 navElem.forEach(elem=>{
   elem.addEventListener("click",()=>{
-   primaryNav.setAttribute("data-visible","false");
-   navToggle.setAttribute("aria-expanded","false");
+    primaryNav.setAttribute("data-visible","false");
+    navToggle.setAttribute("aria-expanded","false");
   });
 })
 
@@ -40,7 +40,7 @@ window.addEventListener("scroll",()=>{
   header.classList.remove("header--bg");
 });
 
-
+//Cuando paro el scroll oculto el nav a los 3s
 window.addEventListener("scrollend",()=>{ 
   if((window.innerWidth>500) && (window.scrollY>100)){ 
     temporizador = setTimeout(()=>{
@@ -53,6 +53,7 @@ window.addEventListener("scrollend",()=>{
 //ANIMACIÓN ENTRADA DE BOXES
 const boxes=document.querySelectorAll(".box");
 
+//funcion callback para cuando el box entre en el viewport
 let cargaBox =(entradas,observador)=>{
   entradas.forEach((entrada) => {
     if(entrada.isIntersecting){
