@@ -204,13 +204,13 @@ body{
   filter:blur(2px);
 }
 
-.nav__link:hover{
+.nav__list .nav__link:hover{
   opacity:1;
   filter:blur(0);
   transform:scale(1.1);
 }
 
-.nav__link::before{
+.nav__list .nav__link::before{
   content:'';
   position:absolute;
   top:0;
