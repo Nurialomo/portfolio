@@ -49,6 +49,8 @@ window.addEventListener("scrollend",()=>{
   }
 });
 
+////////////////////////////////////////////////////////////
+//ANIMACIÓN ENTRADA DE BOXES
 const boxes=document.querySelectorAll(".box");
 
 let cargaBox =(entradas,observador)=>{
@@ -61,7 +63,7 @@ let cargaBox =(entradas,observador)=>{
 let observador= new IntersectionObserver(cargaBox,{
   root:null,
   rootMargin:"0px",
-  threshold:.5
+  threshold:.2
 })
 
 boxes.forEach(box=>{
