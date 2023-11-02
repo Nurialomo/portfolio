@@ -267,7 +267,7 @@ body{
 	display:flex;
 	align-items: center;
 	justify-content:center;
-	height:100vh;
+	min-height:100vh;
 }
 .welcome__img-container{
 	background-image:url("../img/fondo_img.svg");
