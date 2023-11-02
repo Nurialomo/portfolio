@@ -19,7 +19,7 @@ navToggle.addEventListener("click",()=>{
   }
 });
 
-//cierra la navegación cuando se clica un enlace
+//cierra la navegación cuando se clica un enlace en la versión movil
 navElem.forEach(elem=>{
   elem.addEventListener("click",()=>{
    primaryNav.setAttribute("data-visible","false");
@@ -47,4 +47,23 @@ window.addEventListener("scrollend",()=>{
         header.classList.add("header--none");
     }, 3000);    
   }
+});
+
+const boxes=document.querySelectorAll(".box");
+
+let cargaBox =(entradas,observador)=>{
+  entradas.forEach((entrada) => {
+    if(entrada.isIntersecting){
+      entrada.target.classList.add("visible");
+    }
+  });
+}
+let observador= new IntersectionObserver(cargaBox,{
+  root:null,
+  rootMargin:"0px",
+  threshold:.5
+})
+
+boxes.forEach(box=>{
+  observador.observe(box);
 });

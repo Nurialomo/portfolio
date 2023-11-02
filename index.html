@@ -11,88 +11,88 @@
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Merriweather:ital,wght@1,700&family=Oswald:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-	<! //////////////////////////////////////////////////////////////->
-	<! HEADER ->
-	<! //////////////////////////////////////////////////////////////->
+	<!--////////////////////////////////////////////////////////////-->
+	<!-- HEADER -->
+	<!--////////////////////////////////////////////////////////////-->
 	<header class="header">
 		<div class="container header__container">
-			<! LOGO ->
-			<! ///////////////////////////////////////////////////->
+			<!-- LOGO -->
+			<!-- ///////////////////////////////////////////////////-->
 			<div class="header__logo">
 				<p class="header__title title"><span class="header__tl--la">la</span>LULA</h1>
 				<p class="header__subtitle subtitle">Frontend developer</h2>
 			</div>
 
-			<! NAV ->
-			<! ///////////////////////////////////////////////////->
+			<!-- NAV -->
+			<!--///////////////////////////////////////////////////-->
 			<button class="mobile-nav-toggle" aria-controls="primary-nav" aria-expanded="false"></button>
 			<nav id="primary-nav" class="primary-nav" data-visible="">
 				<ul class="nav__list">
 					<li class="nav__elem"><a href="#experiencia" class="nav__link">Experiencia</a></li>
 					<li class="nav__elem"><a href="#estudios" class="nav__link">Estudios</a></li>
 					<li class="nav__elem"><a href="#contacto" class="nav__link">Contacto</a></li>
-					<li class="nav__elem"><button class="nav__button">CV</button></li>					
+					<li class="nav__elem"><button class="button button--down"><a href="docs/Nuria_Lopez_CV.pdf" download="Nuria_Lopez_CV" class="nav__link--button"> CV</a></button></li>					
 				</ul>				
 			</nav>
 		</div>
 	</header>
 
-	<! //////////////////////////////////////////////////////////////->
-	<! MAIN ->
-	<! //////////////////////////////////////////////////////////////->
+	<!--////////////////////////////////////////////////////////////-->
+	<!-- MAIN -->
+	<!-- ///////////////////////////////////////////////////////////-->
 	<main>
-		<! WELCOME ->
-		<! ///////////////////////////////////////////////////->
+		<!-- WELCOME -->
+		<!-- ///////////////////////////////////////////////////-->
 		<section class="section welcome section--grad">
 			<div class="container welcome__container">
-				<div class="welcome__img"><img src="img/recurso1.png" class="img"></div>
+				<div class="welcome__img-container"><img class="welcome__img" src="img/recurso1.png" class="img"></div>
 				<div class="welcome__text">
 					<h1 class="welcome__title title">¡Hola! Soy Núria</h1>
 					<h2 class="welcome_subtitle subtitle">Frontend developer</h2>
-					<p class="welcome__text text">Después de nueve años gestionando mi propia empresa de hostelería vuelvo al mundo del desarrollo web. Tengo experiencia de más de diez años en este sector y si... ha pasado mucho tiempo  pero no me subestiméis, ¡me estoy reciclando y poniendo al día para triunfar!</p>
+					<p class="welcome__text text">Después de nueve años gestionando mi propia empresa de hostelería vuelvo al mundo del desarrollo web. Tengo experiencia de más de diez años en este sector y si... ha pasado mucho tiempo pero, ¡estoy preparada para volver!</p>
 				</div>
 			</div>
 		</section>
 
-		<! SKILLS ->
-		<! ///////////////////////////////////////////////////->
-		<section class="section skills">
-			<div class="skills__container">
-				<ul class="skills__list">
-					<li class="skills__elem">
-						<div>
-							<h2 class="skills__subtitle subtitle">Maquetación</h2>
-							<p class="skills__text text">HTML5, CSS3, Bem, SASS</p>
+		<!-- SKILLS -->
+		<!-- ///////////////////////////////////////////////////-->
+		<section class="section">
+			<div class="slider slider--4slides">
+				<ul class="slider__list">
+					<li class="slider__elem">
+						<div class="slider__elem-container">
+							<h2 class="subtitle">Maquetación</h2>
+							<p class="text text--br">HTML5, CSS3, Bem, SASS</p>
 						</div>
 					</li>
-					<li class="skills__elem">
-						<div>
-							<h2 class="skills__subtitle subtitle">Programación</h2>
-							<p class="skills__text text">JS Vanilla, Jquery, AJAX, PHP, MySQL</p>
+					<li class="slider__elem">
+						<div class="slider__elem-container">
+							<h2 class="subtitle">Programación</h2>
+							<p class="text text--br">JS Vanilla, Jquery, AJAX, PHP, MySQL</p>
 						</div>
 					</li>
-					<li class="skills__elem">
-						<div>
-							<h2 class="skills__subtitle subtitle ">Diseño</h2>
-							<p class="skills__text text">Illustrator, Photoshop, Figma, Responsive</p>
+					<li class="slider__elem">
+						<div class="slider__elem-container">
+							<h2 class="subtitle ">Diseño</h2>
+							<p class="text text--br">Illustrator, Photoshop, Figma, Responsive</p>
 						</div>
 					</li>
-					<li class="skills__elem">
-						<div>
-							<h2 class="skills__subtitle subtitle">Frameworks</h2>
-							<p class="skills__text text">Wordpress, en proceso React y Angular</p>
+					<li class="slider__elem">
+						<div class="slider__elem-container">
+							<h2 class="subtitle">Frameworks</h2>
+							<p class="text text--br">Wordpress, en proceso React y Angular</p>
 						</div>
 					</li>
 				</ul>
 			</div>
 		</section>
 
-		<! EXPERIENCIA ->
-		<! ///////////////////////////////////////////////////->
-		<section class="section experiencia section--grad" id="experiencia">
-			<div class="container experiencia__container">
+		<!-- EXPERIENCIA -->
+		<!-- ///////////////////////////////////////////////////-->
+		<section class="section section--extra-padd section--grad" id="experiencia">
+			<div class="container">
 				<h2 class="section__title title">Experiencia profesional</h2>
-				<div class="boxes">
+				<div class="boxes boxes--3col">
 					<div class="box">
 						<p class="box__subtitle3 subtitle3">Mayo 2014 - abril 2023</p>
 						<h3 class="box__subtitle subtitle">Gerente restaurante</h3>
@@ -158,44 +158,42 @@
 			</div>
 		</section>
 
-		<! APTITUDES ->
-		<! ///////////////////////////////////////////////////->
-		<section class="section aptitudes">	
-			<div class="container aptitudes__container">	
-				<div class="boxes">	
-					<div class="box">
-						<h2 class="aptitudes__subtitle subtitle">Aptitudes</h2>
-						<ul class="aptitudes__list">
-							<li class="aptitudes__elem text">Creatividad</li>
-							<li class="aptitudes__elem text">Motivación y liderazgo</li>
-							<li class="aptitudes__elem text">Trabajo en equipo</li>
-						</ul>
-					</div>
-					<div class="box">
-						<ul class="aptitudes__list">
-							<li class="aptitudes__elem text">Dotes de planificación y gestión</li>
-							<li class="aptitudes__elem text">Atención al detalle</li>
-							<li class="aptitudes__elem text">Trato amable y atento</li>
-						</ul>
-					</div>
-					<div class="box">
-						<h2 class="aptitudes__subtitle subtitle">Idiomas</h2>
-						<ul class="aptitudes__list">
-							<li class="aptitudes__elem text">Castellano</li>
-							<li class="aptitudes__elem text">Català (Nivell C)</li>
-							<li class="aptitudes__elem text">Inglés (B2)</li>
-						</ul>
-					</div>
+		<!-- APTITUDES -->
+		<!--///////////////////////////////////////////////////-->
+		<section class="section">	
+			<div class="slider slider--2slides">	
+				<ul class="slider__list">
+					<li class="slider__elem">
+						<div class="slider__elem-container">
+							<h2 class="subtitle">Aptitudes</h2>
+							<ul class="elem__list">
+								<li class="text text--br">Creatividad | Atención al detalle</li>
+								<li class="text text--br">Motivación y liderazgo | Dotes de planificación y gestión</li>
+								<li class="text text--br">Trabajo en equipo | Trato amable y atento</li>
+								<li class="text text--br"></li>	
+							</ul>
+						</div>
+					</li>
+					<li class="slider__elem">
+						<div class="slider__elem-container">
+							<h2 class="subtitle">Idiomas</h2>
+							<ul class="elem__list">
+								<li class="text text--br">Castellano</li>
+								<li class="text text--br">Català (nivell C)</li>
+								<li class="text text--br">Inglés (B2)</li>
+							</ul>
+						</div>
+					</li>
 				</div>
 			</div>
 		</section>
 
-		<! ESTUDIOS ->
-		<! ///////////////////////////////////////////////////->
-		<section class="section estudios section--grad" id="estudios">
-				<div class="container estudios__container">
+		<!-- ESTUDIOS -->
+		<!-- ///////////////////////////////////////////////////-->
+		<section class="section section--extra-padd section--grad" id="estudios">
+				<div class="container">
 				<h2 class="title section__title">Estudios</h2>	
-				<div class="boxes">
+				<div class="boxes boxes--2col">
 					<div class="box">
 						<p class="box__subtitle3 subtitle3">Junio 2023 - septiembre 2023</p>
 						<h3 class="box__subtitle subtitle">Diseño web con HTML5, CSS3 y JavaScript</h3>
@@ -231,24 +229,31 @@
 		</section>
 	</main>
 
-	<! //////////////////////////////////////////////////////////////->
-	<! FOOTER ->
-	<! //////////////////////////////////////////////////////////////->
+	<!--////////////////////////////////////////////////////////////-->
+	<!--FOOTER -->
+	<!--///////////////////////////////////////////////////////////-->
 	<footer class="footer">
-		<! CONTACTO ->
-		<! ///////////////////////////////////////////////////->
-		<div class="container contact" id="contacto">
-			<form class="contact__form">
-				<input type="text" name="" class="form__input">
-				<input type="text" name="" class="form__input">
-				<input type="text" name="" class="form__input">
-				<button class="form__submit">Enviar</button>	
+		<!-- CONTACTO -->
+		<!-- ///////////////////////////////////////////////////-->
+		<div class="container container--footer">
+			<div class="footer__text">
+				<h2 class="title section__title">Contacto</h2>
+			
+				<p class="text">Podéis contactarme a través del fromulario o a través de:</p>
+				<ul class="footer__list">
+					<li class="footer__elem footer__elem--mail text"><span class="bold">Email:</span> <a href="mailto:nurialomo@gmail.com" class="footer__link text">nurialomo@gmail.com</a></li>
+					<li class=" footer__elem footer__elem--whats text"><a href="https://api.whatsapp.com/send/?phone=0034657592004" class="footer__link text"><span class="bold">WhatsApp</span></a></li>
+					<li class="footer__elem footer__elem--git text"><a href="https://github.com/Nurialomo" class="footer__link text"><span class="bold">Github</span></a></li>
+				</ul>
+
+			</div>
+			<form class="footer__form">
+				<input type="text" name="" placeholder="Nombre" class="footer__input">
+				<input type="text" name="mail" placeholder="E-mail" class="footer__input">
+				<input type="text" name="mensaje" placeholder="Teléfono" class="footer__input">
+				<textarea name="texto"  placeholder="Tu mensaje" class="footer__input"></textarea>
+				<button class="footer__submit button">Enviar</button>	
 			</form>
-			<ul class="contact__list">
-				<li class="contact__elem--mail">nurialomo@gmail.com</li>
-				<li class="contact__elem--whats">657592004</li>
-				<li class="contact__elem--git">Github</li>
-			</ul>
 		</div>
 	</footer>
 
