@@ -45,7 +45,7 @@
 		<!-- ///////////////////////////////////////////////////-->
 		<section class="section welcome section--grad">
 			<div class="container welcome__container">
-				<div class="welcome__img-container"><img class="welcome__img" src="img/recurso1.png" class="img"></div>
+				<div class="welcome__img-container"><img class="welcome__img" src="img/yo.png" class="img"></div>
 				<div class="welcome__text">
 					<h1 class="welcome__title title">¡Hola! Soy Núria</h1>
 					<h2 class="welcome_subtitle subtitle">Frontend developer</h2>
@@ -124,13 +124,13 @@
 						<p class="text box--text">Desarrollo de cursos online usando Macromedia Flash, diseño gráfico de interfaces y testeo del software finalizado.</p>
 					</div>
 					<div class="box">
-						<p class="box__subtitle3 subtitle3">2014 - 2023</p>
+						<p class="box__subtitle3 subtitle3">Agosto 2004 - Noviembre 2004</p>
 						<h3 class="box__subtitle subtitle">Soporte técnico</h3> 
 						<p class="box__subtitle2 subtitle2">Lexmark · Dublin</p>
 						<p class="text box--text">Primer punto de contacto de los clientes de Lexmark aportando todo tipo de soporte técnico sobre sus productos.</p>
 					</div>
 					<div class="box">
-						<p class="box__subtitle3 subtitle3">2014 - 2023</p>
+						<p class="box__subtitle3 subtitle3">Febrero 2004 - Julio 2004</p>
 						<h3 class="box__subtitle subtitle">Soporte técnico</h3>
 						<p class="box__subtitle2 subtitle2">Xerox · Dublin</p>
 						<p class="text box--text">Primer punto de contacto de los clientes de Xerox aportando todo tipo de soporte técnico sobre sus productos.</p>
@@ -245,15 +245,47 @@
 					<li class=" footer__elem footer__elem--whats text"><a href="https://api.whatsapp.com/send/?phone=0034657592004" class="footer__link text"><span class="bold">WhatsApp</span></a></li>
 					<li class="footer__elem footer__elem--git text"><a href="https://github.com/Nurialomo" class="footer__link text"><span class="bold">Github</span></a></li>
 				</ul>
-
 			</div>
-			<form class="footer__form">
-				<input type="text" name="" placeholder="Nombre" class="footer__input">
-				<input type="text" name="mail" placeholder="E-mail" class="footer__input">
-				<input type="text" name="mensaje" placeholder="Teléfono" class="footer__input">
-				<textarea name="texto"  placeholder="Tu mensaje" class="footer__input"></textarea>
-				<button class="footer__submit button">Enviar</button>	
+
+			<form class="footer__form" id="contact__form">
+
+				<p class="form__p">
+					<label for="nombre" class="text">Nombre: *</label>
+					<input type="text" id="nombre" name="nombre" class="form__input" required>
+				</p>
+
+				<p class="form__p">
+					<label for="email" class="text">Email: *</label>
+					<input type="email" name="email" id="email" class="form__input" pattern="[a-zA-Z0-9!#$%&'*\/=?^_`\{\|\}~\+\-]([\.]?[a-zA-Z0-9!#$%&'*\/=?^_`\{\|\}~\+\-])+@[a-zA-Z0-9]([^@&%$\/\(\)=?¿!\.,:;]|\d)+[a-zA-Z0-9][\.][a-zA-Z]{2,4}([\.][a-zA-Z]{2})?" title="Introduce un email correcto" required>
+				</p>
+
+				<p class="form__p">
+					<label for="telefono" class="text">Teléfono:</label>
+					<input type="text" name="telefono" id="telefono" class="form__input" pattern="[0-9 -+]{9,18}" title="Introduce un teléfono correcto">
+				</p>
+
+				<p class="form__p">
+					<label for="mensaje" class="text">Mensaje: *</label>
+					<textarea name="mensaje" id="mensaje" class="form__input" title="Dime algo..." required></textarea>
+				</p>
+
+				<p class="form__p p--right">
+					<input type="submit" class="form__submit button" value="Enviar">
+				</p>
 			</form>
+		</div>
+		<div class="form__feedback form__feedback--loader">
+			<!-- LOADER -->
+			<div class="svg-loader">
+	   			<svg class="svg-container" height="50" width="50" viewBox="0 0 100 100">
+	       			<circle class="loader-svg bg" cx="50" cy="50" r="45"></circle>
+	       			<circle class="loader-svg animate" cx="50" cy="50" r="45"></circle>
+	   			 </svg>
+			</div>
+
+		</div>
+		<div class="form__feedback form__feedback--message">
+			<p class="form__messsage text">Hola</p>
 		</div>
 	</footer>
 

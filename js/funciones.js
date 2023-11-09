@@ -57,7 +57,7 @@ const boxes=document.querySelectorAll(".box");
 let cargaBox =(entradas,observador)=>{
   entradas.forEach((entrada) => {
     if(entrada.isIntersecting){
-      entrada.target.classList.add("visible");
+      entrada.target.classList.add("box--visible");
     }
   });
 }
@@ -70,3 +70,52 @@ let observador= new IntersectionObserver(cargaBox,{
 boxes.forEach(box=>{
   observador.observe(box);
 });
+
+////////////////////////////////////////////////////////////
+//FORMULARIO
+const formulario=document.querySelector("#contact__form");
+const loader=document.querySelector(".form__feedback--loader");
+const divFeedback=document.querySelector(".form__feedback--message");
+const pFeedback=document.querySelector(".form__messsage");
+
+formulario.addEventListener("submit",evento=>{
+  evento.preventDefault();
+  
+  loader.classList.add("form--visible");
+
+  const data = new FormData(formulario);
+
+  fetch('php/send.php', {
+     method: 'POST',
+     body: data
+  })
+  .then(function(response) {
+     if(response.ok) {
+         return response.text()
+     } else {
+         throw "Error en la llamada Ajax";
+     }
+
+  })
+  .then(function(texto) {
+    loader.classList.remove("form--visible");
+    pFeedback.innerHTML="Gracias por contactar conmigo";
+    divFeedback.classList.add("form--visible");
+    temporizador = setTimeout(()=>{
+        divFeedback.classList.remove("form--visible");
+    }, 4000); 
+     console.log(texto);
+  })
+  .catch(function(err) {
+    loader.classList.remove("form--visible");
+    pFeedback.innerHTML="Ha habido algún problema al enviar el formulario. Por favor, contacta conmigo por otro canal.";
+    divFeedback.classList.add("form--visible");
+    temporizador = setTimeout(()=>{
+        divFeedback.classList.remove("form--visible");
+    }, 4000); 
+     console.log(err);
+  });
+  
+});
+
+
